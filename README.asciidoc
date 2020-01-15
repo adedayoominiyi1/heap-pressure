@@ -1,0 +1,20 @@
+== Heap Pressure Metrics
+
+Exposes two metrics:
+
+* Low pool memory
+* GC overhead
+
+Thresholds for these two are described in [TeamCity's Memory Monitor](https://www.jetbrains.com/help/teamcity/teamcity-memory-monitor.html), and may or may not be good values for other apps.
+
+=== Using
+
+[source,java]
+----
+JvmHeapPressureMetrics metrics = new JvmHeapPressureMetrics(Duration.ofMinutes(5), Duration.ofMinutes(1));
+...
+// periodically ship the following values
+metrics.oldGenPoolUsedAfterGc() <1>
+metrics.gcOverhead()
+----
+<1> Both are expressed as a percentage in the range [0..1]
