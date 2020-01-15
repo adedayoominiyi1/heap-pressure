@@ -127,7 +127,7 @@ public class JvmHeapPressureMetrics implements AutoCloseable {
         return MemoryType.HEAP.equals(memoryPoolBean.getType());
     }
 
-    static double getUsageValue(MemoryPoolMXBean memoryPoolMXBean, ToLongFunction<MemoryUsage> getter) {
+    private static double getUsageValue(MemoryPoolMXBean memoryPoolMXBean, ToLongFunction<MemoryUsage> getter) {
         MemoryUsage usage = getUsage(memoryPoolMXBean);
         if (usage == null) {
             return Double.NaN;
