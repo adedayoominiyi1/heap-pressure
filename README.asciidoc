@@ -14,7 +14,8 @@ Thresholds for these two are described in https://www.jetbrains.com/help/teamcit
 JvmHeapPressureMetrics metrics = new JvmHeapPressureMetrics(Duration.ofMinutes(5), Duration.ofMinutes(1));
 ...
 // periodically ship the following values
-metrics.oldGenPoolUsedAfterGc() <1>
+metrics.oldGenPoolUsedAfterGc()
 metrics.gcOverhead()
 ----
-<1> Both are expressed as a percentage in the range [0..1]
+
+Both measurements are expressed as a percentage in the range [0..1]
