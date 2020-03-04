@@ -5,7 +5,7 @@ Exposes two metrics:
 * Low pool memory
 * GC overhead
 
-Thresholds for these two are described in [TeamCity's Memory Monitor](https://www.jetbrains.com/help/teamcity/teamcity-memory-monitor.html), and may or may not be good values for other apps.
+Thresholds for these two are described in https://www.jetbrains.com/help/teamcity/teamcity-memory-monitor.html[TeamCity's Memory Monitor], and may or may not be good values for other apps.
 
 === Using
 
